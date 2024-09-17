@@ -1,11 +1,40 @@
 //get form element by id
 
-const registerForm = document.getElementById("register");
-
-// function registerUser() {}
+const registerForm = document.querySelector("#register");
+console.log(registerForm);
 
 //Handle form submit event
-registerForm.onsubmit = function (event) {
-    event.preventDefault();
-  console.log(event);
-};
+registerForm.addEventListener("submit", function (event) {
+  event.preventDefault();
+  // collect form data
+  const formData = new FormData(registerForm);
+
+  // send data to backend
+
+  // Display success message to user.
+  const messageH1 = document.querySelector("#message");
+  messageH1.textContent = "Account registered successfully";
+
+  // console.log(
+  //   formData.get("username"),
+  //   formData.get("email"),
+  //   formData.get("password")
+  // );
+});
+// registerForm.onsubmit = function (event) {
+//     event.preventDefault();
+//   console.log(event);
+// };
+
+// Declare variable age
+let age;
+
+// Define square age function
+
+function squareAge(age) {
+  result = age * age;
+  return result;
+}
+
+let answer = squareAge(20);
+console.log(answer);
