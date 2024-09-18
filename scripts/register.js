@@ -5,11 +5,13 @@ console.log(registerForm);
 
 //Handle form submit event
 registerForm.addEventListener("submit", function (event) {
-  event.preventDefault();
+event.preventDefault();
+
   // collect form data
   const formData = new FormData(registerForm);
 
   // send data to backend
+  
 
   // Display success message to user.
   const messageH1 = document.querySelector("#message");
@@ -25,6 +27,17 @@ registerForm.addEventListener("submit", function (event) {
 //     event.preventDefault();
 //   console.log(event);
 // };
+
+
+
+// function charlotte (age) {
+//   let result= age * 2;
+//   return result;
+// }
+
+// charlotte(10);
+
+// console.log(charlotte(10))
 
 // Declare variable age
 let age;
